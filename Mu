@@ -1,0 +1,23 @@
+from instapy import InstaPy
+
+# Введите свои учетные данные Instagram
+username = 'your_username'
+password = 'your_password'
+
+# Инициализация сессии InstaPy
+session = InstaPy(username=username, password=password)
+
+# Вход в Instagram
+session.login()
+
+# Установка тегов для лайков
+tags = ['tag1', 'tag2', 'tag3']
+
+# Установка количества лайков для каждого тега
+amount = 5
+
+# Поставить лайки по тегам
+session.like_by_tags(tags, amount)
+
+# Завершение сессии
+session.end()
